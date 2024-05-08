@@ -1,0 +1,24 @@
+[08:53:53.655] Namespace(accumulation_steps=None, amp_opt_level='O1', base_lr=0.01, batch_size=24, cache_mode='part', cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', dataset='Scar', deterministic=1, eval=False, img_size=224, list_dir='./lists/lists_Scar', max_epochs=150, max_iterations=30000, n_gpu=1, num_classes=2, opts=None, output_dir='./output_dir', resume=None, root_path='./data/Scar/train_npz\\train_npz', seed=1234, tag=None, throughput=False, use_checkpoint=False, zip=False)
+[08:53:53.684] 10 iterations per epoch. 1500 max iterations 
+[08:54:33.059] Namespace(accumulation_steps=None, amp_opt_level='O1', base_lr=0.01, batch_size=24, cache_mode='part', cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', dataset='Scar', deterministic=1, eval=False, img_size=224, list_dir='./lists/lists_Scar', max_epochs=150, max_iterations=30000, n_gpu=1, num_classes=2, opts=None, output_dir='./output_dir', resume=None, root_path='./data/Scar/train_npz\\train_npz', seed=1234, tag=None, throughput=False, use_checkpoint=False, zip=False)
+[08:54:33.070] 10 iterations per epoch. 1500 max iterations 
+[08:55:44.051] Namespace(accumulation_steps=None, amp_opt_level='O1', base_lr=0.01, batch_size=24, cache_mode='part', cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', dataset='Scar', deterministic=1, eval=False, img_size=224, list_dir='./lists/lists_Scar', max_epochs=150, max_iterations=30000, n_gpu=1, num_classes=2, opts=None, output_dir='./output_dir', resume=None, root_path='./data/Scar/train_npz\\train_npz', seed=1234, tag=None, throughput=False, use_checkpoint=False, zip=False)
+[08:55:44.070] 10 iterations per epoch. 1500 max iterations 
+[08:56:31.643] Namespace(accumulation_steps=None, amp_opt_level='O1', base_lr=0.01, batch_size=24, cache_mode='part', cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', dataset='Scar', deterministic=1, eval=False, img_size=224, list_dir='./lists/lists_Scar', max_epochs=150, max_iterations=30000, n_gpu=1, num_classes=2, opts=None, output_dir='./output_dir', resume=None, root_path='./data/Scar/train_npz\\train_npz', seed=1234, tag=None, throughput=False, use_checkpoint=False, zip=False)
+[08:56:31.651] 10 iterations per epoch. 1500 max iterations 
+[08:57:50.269] Namespace(accumulation_steps=None, amp_opt_level='O1', base_lr=0.01, batch_size=24, cache_mode='part', cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', dataset='Scar', deterministic=1, eval=False, img_size=224, list_dir='./lists/lists_Scar', max_epochs=150, max_iterations=30000, n_gpu=1, num_classes=2, opts=None, output_dir='./output_dir', resume=None, root_path='./data/Scar/train_npz\\train_npz', seed=1234, tag=None, throughput=False, use_checkpoint=False, zip=False)
+[08:57:50.278] 10 iterations per epoch. 1500 max iterations 
+[08:58:51.028] Namespace(accumulation_steps=None, amp_opt_level='O1', base_lr=0.01, batch_size=24, cache_mode='part', cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', dataset='Scar', deterministic=1, eval=False, img_size=224, list_dir='./lists/lists_Scar', max_epochs=150, max_iterations=30000, n_gpu=1, num_classes=2, opts=None, output_dir='./output_dir', resume=None, root_path='./data/Scar/train_npz\\train_npz', seed=1234, tag=None, throughput=False, use_checkpoint=False, zip=False)
+[08:58:51.037] 10 iterations per epoch. 1500 max iterations 
+[09:00:36.563] Namespace(accumulation_steps=None, amp_opt_level='O1', base_lr=0.01, batch_size=24, cache_mode='part', cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', dataset='Scar', deterministic=1, eval=False, img_size=224, list_dir='./lists/lists_Scar', max_epochs=150, max_iterations=30000, n_gpu=1, num_classes=2, opts=None, output_dir='./output_dir', resume=None, root_path='./data/Scar/train_npz\\train_npz', seed=1234, tag=None, throughput=False, use_checkpoint=False, zip=False)
+[09:00:36.571] 10 iterations per epoch. 1500 max iterations 
+[09:01:14.612] Namespace(accumulation_steps=None, amp_opt_level='O1', base_lr=0.01, batch_size=24, cache_mode='part', cfg='configs/swin_tiny_patch4_window7_224_lite.yaml', dataset='Scar', deterministic=1, eval=False, img_size=224, list_dir='./lists/lists_Scar', max_epochs=150, max_iterations=30000, n_gpu=1, num_classes=2, opts=None, output_dir='./output_dir', resume=None, root_path='./data/Scar\\train_npz', seed=1234, tag=None, throughput=False, use_checkpoint=False, zip=False)
+[09:01:14.621] 10 iterations per epoch. 1500 max iterations 
+[09:01:52.761] iteration 1 : loss : 0.707221, loss_ce: 0.831232
+[09:02:16.365] iteration 2 : loss : 0.601976, loss_ce: 0.630513
+[09:02:31.994] iteration 3 : loss : 0.472486, loss_ce: 0.378353
+[09:02:45.681] iteration 4 : loss : 0.385719, loss_ce: 0.198468
+[09:02:59.200] iteration 5 : loss : 0.344648, loss_ce: 0.106927
+[09:03:12.224] iteration 6 : loss : 0.324014, loss_ce: 0.058626
+[09:03:25.055] iteration 7 : loss : 0.314613, loss_ce: 0.035991
+[09:03:37.756] iteration 8 : loss : 0.309317, loss_ce: 0.023067

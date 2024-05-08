@@ -9,21 +9,21 @@ import torch.backends.cudnn as cudnn
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-from datasets.dataset_synapse import Synapse_dataset
+from datasets.dataset_scar import Scar_dataset
 from utils import test_single_volume
 from networks.vision_transformer import SwinUnet as ViT_seg
-from trainer import trainer_synapse
+from trainer import trainer_scar
 from config import get_config
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--volume_path', type=str,
-                    default='../data/Synapse/test_vol_h5', help='root dir for validation volume data')  # for acdc volume_path=root_dir
+                    default='../data/Scar/test_vol_h5', help='root dir for validation volume data')  # for acdc volume_path=root_dir
 parser.add_argument('--dataset', type=str,
-                    default='Synapse', help='experiment_name')
+                    default='Scar', help='experiment_name')
 parser.add_argument('--num_classes', type=int,
                     default=9, help='output channel of network')
 parser.add_argument('--list_dir', type=str,
-                    default='./lists/lists_Synapse', help='list dir')
+                    default='./lists/lists_Scar', help='list dir')
 parser.add_argument('--output_dir', type=str, help='output dir')   
 parser.add_argument('--max_iterations', type=int,default=30000, help='maximum epoch number to train')
 parser.add_argument('--max_epochs', type=int, default=150, help='maximum epoch number to train')
@@ -58,7 +58,7 @@ parser.add_argument('--eval', action='store_true', help='Perform evaluation only
 parser.add_argument('--throughput', action='store_true', help='Test throughput only')
 
 args = parser.parse_args()
-if args.dataset == "Synapse":
+if args.dataset == "Scar":
     args.volume_path = os.path.join(args.volume_path, "test_vol_h5")
 config = get_config(args)
 
@@ -96,13 +96,13 @@ if __name__ == "__main__":
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
-    torch.cuda.manual_seed(args.seed)
+    #torch.cuda.manual_seed(args.seed)
 
     dataset_config = {
-        'Synapse': {
-            'Dataset': Synapse_dataset,
+        'Scar': {
+            'Dataset': Scar_dataset,
             'volume_path': args.volume_path,
-            'list_dir': './lists/lists_Synapse',
+            'list_dir': './lists/lists_Scar',
             'num_classes': 9,
             'z_spacing': 1,
         },
@@ -115,7 +115,7 @@ if __name__ == "__main__":
     args.z_spacing = dataset_config[dataset_name]['z_spacing']
     args.is_pretrain = True
 
-    net = ViT_seg(config, img_size=args.img_size, num_classes=args.num_classes).cuda()
+    net = ViT_seg(config, img_size=args.img_size, num_classes=args.num_classes)#.cuda()
 
     snapshot = os.path.join(args.output_dir, 'best_model.pth')
     if not os.path.exists(snapshot): snapshot = snapshot.replace('best_model', 'epoch_'+str(args.max_epochs-1))

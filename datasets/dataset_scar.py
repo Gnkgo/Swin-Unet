@@ -46,11 +46,12 @@ class RandomGenerator(object):
         return sample
 
 
-class Synapse_dataset(Dataset):
+class Scar_dataset(Dataset):
     def __init__(self, base_dir, list_dir, split, transform=None):
         self.transform = transform  # using transform in torch!
         self.split = split
-        self.sample_list = open(os.path.join(list_dir, self.split+'.txt')).readlines()
+        self.sample_list = open(os.path.join(list_dir, self.split+'.txt').replace("\\", "/")).readlines()
+        
         self.data_dir = base_dir
 
     def __len__(self):
@@ -60,6 +61,9 @@ class Synapse_dataset(Dataset):
         if self.split == "train":
             slice_name = self.sample_list[idx].strip('\n')
             data_path = os.path.join(self.data_dir, slice_name+'.npz')
+            data_path = data_path.replace("\\", '/')
+            #print("data_path1", data_path)
+
             data = np.load(data_path)
             image, label = data['image'], data['label']
         else:
